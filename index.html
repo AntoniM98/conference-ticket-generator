@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> 
+    <title>Conference ticket generator</title>
+    <link href="./styles/general.css" rel="stylesheet">
+    <link href="./styles/form.css" rel="stylesheet">
+    <link href="./styles/ticket.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./assets/images/logo-full.svg">
+    </header>
+    <main>
+      <div class="form-page">
+        <section class="introduction">
+          <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+          <p class="description">Secure your spot at next year's biggest coding conference.</p>
+        </section>
+        <form id="form" action="/" method="POST">
+          <label for="avatar">
+            Upload Avatar
+            <div class="drop-area input-field" tabindex="0">
+              <input id="avatar" type="file" name="avatar" accept=".png, .jpg, .jpeg" hidden>
+              <div class="img-preview">
+                <img src="./assets/images/icon-upload.svg">
+              </div>
+              <p class="drop-area-instructions">Drag and drop or click to upload</p>
+              <div class="drop-area-button-container" hidden>
+                <button class="drop-area-button" id="remove-img-button" type="button">Remove image</button>
+                <button class="drop-area-button" id="change-img-button" type="button">Change image</button>
+              </div>
+            </div>
+          </label>
+          <span class="upload-instructions">Upload your photo (JPG or PNG, max size: 500KB).</span>
+          <span id="avatar-error" class="error-message" hidden></span>
+
+          <label for="name">Full Name</label>
+          <input id="name" class="input-field" type="text" name="name" placeholder="John Doe">
+          <span id="name-error" class="error-message" hidden>Please enter a name.</span>
+
+          <label for="email">Email Address</label>
+          <input id="email" class="input-field" type="text" name="email" placeholder="example@email.com">
+          <span id="email-error" class="error-message" hidden>Please enter a valid email address.</span>
+
+          <label for="github">GitHub Username</label>
+          <input id="github" class="input-field" type="text" name="github-name" placeholder="@yourusername">
+          <span id="github-error" class="error-message" hidden>Please enter a valid GitHub username.</span>
+
+          <button class="submit-button" type="submit">Generate My Ticket</button>
+        </form>
+      </div>
+
+      <div class="ticket-page" hidden>
+      </div>
+    </main>
+    
+    <div class="background-patterns">
+      <img class="pattern circle" src="./assets/images/pattern-circle.svg">
+      <img class="pattern lines" src="./assets/images/pattern-lines.svg">
+      <img class="pattern squiggle-top" src="./assets/images/pattern-squiggly-line-top.svg">
+      <picture>
+        <source class="pattern squiggle-bottom" media="(min-width:500px)" srcset="./assets/images/pattern-squiggly-line-bottom-desktop.svg">
+        <img class="pattern squiggle-bottom" src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg">
+      </picture>
+    </div>
+    
+    <script type="module" src="./scripts/form.js"></script>
+    <script type="module" src="./scripts/uploadFile.js"></script>
+    <script type="module" src="./scripts/ticket.js"></script>
+  </body>
+</html>

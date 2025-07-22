@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Inconsolata;
+  src: url(../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf) format('woff2');
+}
+
+:root {
+  --header-color: hsl(0, 0%, 100%);
+  --font-color: hsl(252, 6%, 83%);
+  --border-color: hsl(245, 15%, 58%);
+  --upload-btn-color: hsl(245, 19%, 35%);
+  --font-color-dark: hsl(248, 70%, 10%);
+  --red-color: hsl(7, 88%, 67%);
+  --red-color-hover: hsl(7, 71%, 60%);
+}
+
+* {
+  font-family: 'Inconsolata', sans-serif;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+  color: var(--header-color);
+}
+
+body {
+  background: center / cover url("../assets/images/background-desktop.png");
+  padding-top: 40px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+/* Header */
+header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+main {
+  max-width: 50%;
+  min-width: 450px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.introduction {
+  text-align: center;
+}
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+.description {
+  color: var(--font-color);
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    min-width: 100%;
+    padding: 0 1em;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+  }
+}

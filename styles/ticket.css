@@ -1,0 +1,94 @@
+.full-name {
+  background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ticket-confirmation {
+  color: var(--font-color);
+  max-width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+.email-address {
+  color: var(--red-color);
+}
+
+/* Ticket */
+.ticket {
+  margin: 5em auto 6em auto;
+  position: relative;
+  max-width: 500px;
+  min-width: 450px;
+  backdrop-filter: blur(2px);
+}
+
+.ticket-body {
+  width: 100%;
+}
+
+.ticket-top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 0.8em;
+}
+.ticket-top-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.7em;
+}
+.ticket-date-city, .ticket-github {
+  font-size: 0.8rem;
+  color: var(--font-color);
+}
+
+.ticket-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 0.8em;
+}
+.ticket-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.ticket-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ticket-github {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4em;
+  margin-top: 0.4em;
+}
+
+.ticket-number {
+  font-size: 1.4rem;
+  color: var(--border-color);
+  transform: rotateZ(90deg);
+  position: absolute;
+  right: -5px;
+  top: 43%;
+}
+
+@media screen and (max-width: 500px) {
+  .ticket-confirmation {
+    min-width: 100%;
+  }
+
+  .ticket {
+    margin: 4em 0 6em 0;
+    min-width: 100%;
+  }
+}
